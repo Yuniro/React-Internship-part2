@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>React Part 2</title>
+<style>
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding:0;
+        margin:0;
+    }
+    
+    header {
+        background: url(./img/header.png) no-repeat center top / cover;
+        height:1085px;
+    }
+    section {
+	background: linear-gradient(180deg,#f2f5f7 50%, white 50%);
+	padding-top: 50px;
+	height:1842px;
+    }
+    footer {
+        background: url(./img/footer.png) no-repeat center top / cover;
+        height:856px;
+    }
+    ul {
+        padding:0;
+        margin:0;
+        display:flex;
+    }
+    ul li {
+        display:flex;
+        margin-right: 36px;
+        font-size: 12px;
+    }
+    ul li a {
+        color:white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .2s linear;
+    }
+    
+    ul li a:hover {
+        color: yellow;
+    }
+    
+    
+    .container {
+        margin: 0 auto;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top:30px;
+        width:980px;
+    }
+    #name {
+        color:rgb(231, 153, 6);
+        font-size: 12px;
+        padding-top: 225px;
+    }
+    .box {
+        margin: 0 auto;
+        width:980px;
+    }
+    #headline {
+        color:white;
+        width:400px;
+    }
+    #headline2 {
+        font-size:12px;
+        color:rgba(255, 255, 255, 0.712);
+        width:370px;
+    }
+    p a {
+        color:#01b4f9;
+    }
+    ul lo {
+        display:flex;
+        margin-right: 15px;
+        font-size: 12px;
+        padding-top: 50px;
+    }
+    ul lo a {
+        color:white;
+        transition: color .2s linear;
+    }
+    .icon {
+        block-size: 65px;
+        padding-top: 270px;
+    }
+    #button {
+        background:#ffc000;
+        height: 40px;
+        width: 180px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        text-transform: uppercase;
+    }
+    #texttransport {
+        display:flex;
+        justify-content: center;
+        font-size:28px;
+    }
+
+    .image {
+        margin:0 auto;
+	    padding-left:40px;
+	    padding-top:30px;
+        width:930px;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .title {
+	margin:0 auto;
+        color:#8fa6b2;
+        width:930px;
+        display:flex;
+        justify-content: space-between;
+    }
+    hr {
+	    border: none; 
+        background-color:#e7ebed; 
+        height: 8px;
+    }
+
+    .transport {
+	margin:0 auto;
+    padding-top:70px;
+	display:flex;
+	justify-content: center;
+	width:930px;
+    }
+    
+    .block{
+        margin:0 auto;
+        width:1175px;
+        padding-right: 30px;
+        display:flex;
+        justify-content: space-between;
+        
+    }
+    #block1 {
+        margin-left:70px;
+        background-color: white;
+        height: 200px;
+        width:254px;
+        box-shadow: 1px 1px 30px;
+    }
+    #block2 {
+        background-color: white;
+        height: 200px;
+        width:254px;
+        box-shadow: 1px 1px 30px;
+    }
+    
+    .list {
+        font-size: 10px;
+        color:#2f4365;
+        padding-left:20px;
+        display:flex;
+        text-decoration: none;
+    }
+
+    .textlist {
+        font-size: 12px;
+        color:black;
+        padding-left:20px;
+        display:flex;
+    }
+
+    .list2 {
+        font-size: 10px;
+        color:#2f4365;
+        display:flex;
+        width:200px;
+        flex-direction:row;
+        justify-content: space-between;
+    }
+    
+    .list3 {
+        font-size: 10px;
+        color:black;
+        padding-left:20px;
+        display:flex;
+    }
+
+    #button3 {
+        margin:0 auto;
+        margin-top: 150px;
+        background:#ffc000;
+        height: 60px;
+        width: 260px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+	    text-decoration: none;
+        
+    }
+     #text2 {
+	margin:0 auto;
+	color:#87a0ad;
+	display:flex;
+	justify-content: center;
+	width:330px;
+    }
+
+    .sponsor {
+	margin:0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding-top:120px;
+	padding-left:90px;
+	width: 1060px;
+    }
+    #textcontainer {
+	margin-top:90px;
+    }
+    .text {
+        display:flex;
+        align-items: center;
+    }
+    .footer {
+        margin:0 auto;
+        width:980px;
+    }
+    #question {
+        color:white;
+        width:510px;
+        padding-left: 250px;
+        padding-top: 250px;
+    }
+    #more {
+        color:white;
+        width:510px;
+        padding-left: 230px;
+    }
+    #button2 {
+        background:rgb(255, 178, 34);
+        height: 60px;
+        width: 200px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+	text-decoration: none;
+	color:white;
+        
+    }
+    #a {
+	padding-left: 15px;
+        text-decoration: none;
+	color: white;
+    }
+    .button2 {
+        padding-left: 380px;
+        padding-top: 70px;
+    }
+    #group {
+        color:rgba(243, 235, 235, 0.897);
+        font-size: 10px;
+    }
+    .logo {
+        padding-top:120px;
+    }
+    #group2 {
+        margin:0 auto;
+        padding:0;
+        font-size:10px;
+    }
+    .navigation {
+        padding-top: 20px;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="box">
+        <div class="container">
+        <div>
+            <img src="img/logo.png" alt="TDS">
+        </div>
+        <nav>
+            <ul>
+            <li><div id="button"><a href="#"></a>Commercial transport</a></div></li>
+            <li><a href="#" class="text">We present</a></li>
+            <li><a href="#" class="text">About us</a></li>
+            <li><a href="#" class="text">Our partner</a></li>
+            <li><a href="#" class="text">News</a></li>
+            <li><a href="#" class="text">Constract</a></li>
+            <li><a href="#" class="text">LT</a></li>
+        </ul>
+        </nav>
+        </div>
+        <p id="name">TDS Group</p>
+        <h1 id="headline">Best solutions we will come together!</h1>
+        <p id="headline2">We know the suppliers throughout Europe, so we can
+        compare their products in the mean of <a href="#">quality  and price.</a>
+        </p>
+        <p id="headline2">Also we have experience in solution of the financial
+        issues when purchassing the heavy machinery.
+        </p>
+        <nav class="links">
+            <ul>
+            <lo><a href="#" id="links">Trucks</a></lo>
+            <lo><a href="#" id="links">Semi-trailer trucks</a></lo>
+            <lo><a href="#" id="links">Trailers and semitrailers</a></lo>
+            <lo><a href="#" id="links">Cars</a></lo>
+        </ul>
+        </nav>
+        <a href="#"><img src="img/icon.png" class="icon"></a>
+        </div>
+    </header>
+    <section>
+        <div class="">
+            <h1 id="texttransport" style="color:#2f4365">Commercial transport</h1>
+		<div class="image">
+		<img src="img/icon1.png">
+        	<img src="img/icon2.png">
+        	<img src="img/icon3.png">
+        	<img src="img/icon4.png">
+        	</div>
+        	<div class="title">
+            <p style="color:#2f4365">Semi-trailer trucks</p>
+            <p>Trucks</p>
+            <p>Trailer and semitrailers</p>
+            <p>Cars</p>
+        	</div>
+		<hr>
+	<div class="transport">
+	<img src="img/transport1.png" style="block-size:200px;padding-left:40px;">
+	<img src="img/transport2.png" style="block-size:200px;padding-left:30px;">
+	<img src="img/transport3.png" style="block-size:200px;padding-left:30px;">
+	<img src="img/transport4.png" style="block-size:200px;padding-left:30px;">
+	    </div>
+        
+	<div class="block">
+    <div id="block1">
+    <p class="list">Brand:</p>
+    <p class="list3">SCANIA R24 Topline 420</p>
+    <div class="list2">
+    <p class="list">Years:</p>
+    <p class="list">Run.km:</p>
+    <p class="list">ID:</p>
+    </div>
+    <div class="list2">
+    <p class="list3">2002</p>
+    <p class="list3">1583000</p>
+    <p class="list3">269004</p>
+    </div>
+    <p class="list">Price Eur:</p>
+    <p class="list3">3.900</p>
+    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+    </div>
+    <div id="block2">
+        <p class="list">Brand:</p>
+        <p class="list3">DAF XF 105.460</p>
+        <div class="list2">
+        <p class="list">Years:</p>
+        <p class="list">Run.km:</p>
+        <p class="list">ID:</p>
+        </div>
+        <div class="list2">
+            <p class="list3">2008</p>
+            <p class="list3">17000</p>
+            <p class="list3">269004</p>
+            </div>
+        <p class="list">Price Eur:</p>
+        <p class="list3">4.350</p>
+        <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+    </div>
+    <div id="block2">
+        <p class="list">Brand:</p>
+        <p class="list3">MERCEDES-BENZ 589 Glad</p>
+    <div class="list2">
+    <p class="list">Years:</p>
+    <p class="list">Run.km:</p>
+    <p class="list">ID:</p>
+    </div>
+    <div class="list2">
+        <p class="list3">2015</p>
+        <p class="list3">900</p>
+        <p class="list3">268967</p>
+        </div>
+    <p class="list">Price Eur:</p>
+    <p class="list3">15.910</p>
+    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+    </div>
+    <div id="block2">
+        <p class="list">Brand:</p>
+        <p class="list3">VOLVO FH</p>
+        <div class="list2">
+        <p class="list">Years:</p>
+        <p class="list">Run.km:</p>
+        <p class="list">ID:</p>
+        </div>
+        <div class="list2">
+            <p class="list3">2017</p>
+            <p class="list3">17000</p>
+            <p class="list3">267585</p>
+            </div>
+        <p class="list">Price Eur:</p>
+        <p class="list3">18.000</p>
+        <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+    </div>
+        </div>
+        <div class="transport">
+                <img src="img/transport5.png" style="block-size:200px;padding-left:40px;">
+                <img src="img/transport6.png" style="block-size:200px;padding-left:30px;">
+                <img src="img/transport7.png" style="block-size:200px;padding-left:30px;">
+                <img src="img/transport8.png" style="block-size:200px;padding-left:30px;">
+                    </div>
+                    
+                <div class="block">
+                <div id="block1">
+                    <p class="list">Brand:</p>
+                    <p class="list3">MAN TGX 26.480</p>
+                    <div class="list2">
+                    <p class="list">Years:</p>
+                    <p class="list">Run.km:</p>
+                    <p class="list">ID:</p>
+                    </div>
+                    <div class="list2">
+                        <p class="list3">2012</p>
+                        <p class="list3">583000</p>
+                        <p class="list3">269004</p>
+                        </div>
+                    <p class="list">Price Eur:</p>
+                    <p class="list3">31.500</p>
+                    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+                </div>
+                <div id="block2">
+                    <p class="list">Brand:</p>
+                    <p class="list3">MAN TGX 18.440 BLS</p>
+                    <div class="list2">
+                    <p class="list">Years:</p>
+                    <p class="list">Run.km:</p>
+                    <p class="list">ID:</p>
+                    </div>
+                    <div class="list2">
+                        <p class="list3">2003</p>
+                        <p class="list3">600890</p>
+                        <p class="list3">267585</p>
+                        </div>
+                    <p class="list">Price Eur:</p>
+                    <p class="list3">4.900</p>
+                    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+                </div>
+                <div id="block2">
+                    <p class="list">Brand:</p>
+                    <p class="list3">IVECO STRALIS</p>
+                    <div class="list2">
+                    <p class="list">Years:</p>
+                    <p class="list">Run.km:</p>
+                    <p class="list">ID:</p>
+                    </div>
+                    <div class="list2">
+                        <p class="list3">2015</p>
+                        <p class="list3">589000</p>
+                        <p class="list3">268967</p>
+                        </div>
+                    <p class="list">Price Eur:</p>
+                    <p class="list3">15.910</p>
+                    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+                </div>
+                <div id="block2">
+                    <p class="list">Brand:</p>
+                    <p class="list3">MAN TGX 18.440 XXL</p>
+                    <div class="list2">
+                    <p class="list">Years:</p>
+                    <p class="list">Run.km:</p>
+                    <p class="list">ID:</p>
+                    </div>
+                    <div class="list2">
+                        <p class="list3">2010</p>
+                        <p class="list3">350000</p>
+                        <p class="list3">267585</p>
+                        </div>
+                    <p class="list">Price Eur:</p>
+                    <p class="list3">41.350</p>
+                    <p><a href="#" class="list"><img src="img/plus.png">More details</a></p>
+                </div>
+                    </div>
+    <div id="button3"><img src="img/orangeicon.png"><a href="#" id="a">All semi-trailer trucks</a></div>
+    <div id="textcontainer">
+    <p id="text2">We firmly believe that only together we</p>
+    <p id="text2">can find the best solution.</p>
+    </div>
+	<div class="sponsor">
+	<img src="img/sponsor1.png">
+	<img src="img/sponsor2.png">
+	<img src="img/sponsor3.png">
+	<img src="img/sponsor4.png">
+	<img src="img/sponsor5.png">
+	<img src="img/sponsor6.png">
+        </div>
+	</div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div>
+                <h1 id="question">Have a questions for us or</h1>
+                <h1 id="more">you interested in transport?</h1>
+            <div class="button2"><a href="#" id="button2">Contact to us</a></div>
+            <img src="img/logo.png" class="logo">
+            
+            <div class="navigation">
+            <nav>
+                    <ul>
+                    <li id="group">Copyright © TDS Group</li>
+                    <li id="group2"><a href="#">Commercial transport</a></li>
+                    <li id="group2"><a href="#">We present</a></li>
+                    <li id="group2"><a href="#">About us</a></li>
+                    <li id="group2"><a href="#">Our partner</a></li>
+                    <li id="group2"><a href="#">News</a></li>
+                    <li id="group2"><a href="#">Constract</a></li>
+                </ul>
+                </nav>
+            </div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
